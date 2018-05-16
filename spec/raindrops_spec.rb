@@ -20,10 +20,16 @@ describe Raindrop do
         expect(subject.raindrop_output(7)).to eq "Plong"
       end
     end
-    
+
     context 'when number is a factor of combined 3/5/7' do
+      it 'returns "PlingPlang" if input is factor of 3 and 5' do
+        expect(subject.raindrop_output(15)).to eq "PlingPlang"
+      end
       it 'returns "PlingPlong" if input is factor of 3 and 7' do
         expect(subject.raindrop_output(21)).to eq "PlingPlong"
+      end
+      it 'returns "PlangPlong" if input is factor of 5 and 7' do
+        expect(subject.raindrop_output(35)).to eq "PlangPlong"
       end
     end
   end
