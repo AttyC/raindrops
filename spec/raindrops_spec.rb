@@ -5,5 +5,8 @@ describe Raindrop do
     it 'returns "Pling" if input is factor of 3' do
       expect(subject.raindrop_output(3)).to eq "Pling"
     end
+    it 'returns "Plang" if input is factor of 5' do
+      expect(subject.raindrop_output(5)).to eq "Plang"
+    end
   end
 end
