@@ -31,6 +31,9 @@ describe Raindrop do
       it 'returns "PlangPlong" if input is factor of 5 and 7' do
         expect(subject.raindrop_output(35)).to eq "PlangPlong"
       end
+      it 'returns "PlingPlangPlong" if input is factor of 3, 5 and 7' do
+        expect(subject.raindrop_output(105)).to eq "PlingPlangPlong"
+      end
     end
   end
 end
