@@ -4,22 +4,16 @@ class Raindrop
   def raindrop_output(number)
     output = ''
     raise 'Input must be a number' if !number.is_a? Integer
-    output += "Pling" if factor_of_3(number)
-    output += "Plang" if factor_of_5(number)
-    output += "Plong" if factor_of_7(number)
-    output = number if !factor_of_3(number) && !factor_of_5(number) && !factor_of_7(number)
+    output += "Pling" if factor_of(3, number)
+    output += "Plang" if factor_of(5, number)
+    output += "Plong" if factor_of(7, number)
+    output = number if !factor_of(3, number) && !factor_of(5, number) && !factor_of(7, number)
     output
   end
 
-  def factor_of_3(number)
-    true if number %3 == 0
-  end
-
-  def factor_of_5(number)
-    true if number %5 == 0
-  end
-
-  def factor_of_7(number)
-    true if number %7 == 0
+  private
+  
+  def factor_of(factor, number)
+    true if number % factor == 0
   end
 end
