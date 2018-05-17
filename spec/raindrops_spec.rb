@@ -35,5 +35,11 @@ describe Raindrop do
         expect(subject.raindrop_output(105)).to eq "PlingPlangPlong"
       end
     end
+
+    context 'when number is not a factor of 3/5/7' do
+      it 'returns the number' do
+        expect(subject.raindrop_output(34)).to eq 34
+      end
+    end
   end
 end
