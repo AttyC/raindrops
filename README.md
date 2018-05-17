@@ -20,7 +20,7 @@ This test can be completed in a language of your choice and should be made avail
 
 I chose Ruby language, with RSpec for testing. I used Rubocop for code cleanup.
 
-The tests and logic didn't take very long, so I spent a bit of time refcatoring the code and cleaning it up with the help of the ```rubocop``` gem.
+The tests and logic didn't take very long, so I spent a bit of time refactoring the code and cleaning it up with the help of the ```rubocop``` gem.
 
 My initial impression was that this is very close to FizzBuzz, so I sat with that thought for a bit, then I decided to ignore any previous assumptions and work on it as a new problem.
 
@@ -43,7 +43,7 @@ bundle install
 irb
 ```
 
-##### Follow the instructions to require the file and run the code:
+##### Follow the instructions to require the file and run the code, using different input integers:
 
 ```
 require './lib/raindrop.rb'
