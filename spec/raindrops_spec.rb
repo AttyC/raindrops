@@ -2,37 +2,36 @@ require './lib/raindrop.rb'
 
 describe Raindrop do
   describe '#raindrop_output' do
-
     context 'when number is a factor of 3' do
       it 'returns "Pling"' do
-        expect(subject.raindrop_output(3)).to eq "Pling"
+        expect(subject.raindrop_output(3)).to eq 'Pling'
       end
     end
 
     context 'when number is a factor of 5' do
       it 'returns "Plang"' do
-        expect(subject.raindrop_output(5)).to eq "Plang"
+        expect(subject.raindrop_output(5)).to eq 'Plang'
       end
     end
 
     context 'when number is a factor of 7' do
       it 'returns "Plong"' do
-        expect(subject.raindrop_output(7)).to eq "Plong"
+        expect(subject.raindrop_output(7)).to eq 'Plong'
       end
     end
 
     context 'when number is a factor of combined 3/5/7' do
       it 'returns "PlingPlang" if input is factor of 3 and 5' do
-        expect(subject.raindrop_output(15)).to eq "PlingPlang"
+        expect(subject.raindrop_output(15)).to eq 'PlingPlang'
       end
       it 'returns "PlingPlong" if input is factor of 3 and 7' do
-        expect(subject.raindrop_output(21)).to eq "PlingPlong"
+        expect(subject.raindrop_output(21)).to eq 'PlingPlong'
       end
       it 'returns "PlangPlong" if input is factor of 5 and 7' do
-        expect(subject.raindrop_output(35)).to eq "PlangPlong"
+        expect(subject.raindrop_output(35)).to eq 'PlangPlong'
       end
       it 'returns "PlingPlangPlong" if input is factor of 3, 5 and 7' do
-        expect(subject.raindrop_output(105)).to eq "PlingPlangPlong"
+        expect(subject.raindrop_output(105)).to eq 'PlingPlangPlong'
       end
     end
 
@@ -43,7 +42,8 @@ describe Raindrop do
     end
     context 'when number is not an integer' do
       it 'raises an error' do
-        expect{subject.raindrop_output('House')}.to raise_error 'Input must be a number'
+        message = 'Input must be a number'
+        expect { subject.raindrop_output('House') }.to raise_error message
       end
     end
   end
