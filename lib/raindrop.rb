@@ -3,7 +3,7 @@ class Raindrop
 
   def raindrop_output(number)
     output = ''
-
+    raise 'Input must be a number' if !number.is_a? Integer
     output += "Pling" if factor_of_3(number)
     output += "Plang" if factor_of_5(number)
     output += "Plong" if factor_of_7(number)
