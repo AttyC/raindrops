@@ -43,8 +43,12 @@ describe Raindrop do
     context 'when number is not an integer' do
       it 'raises an error' do
         message = 'Input must be a number'
-        expect { subject.raindrop_output('House') }.to raise_error message
+        expect { subject.raindrop_output('Cyclone') }.to raise_error message
       end
+      it 'raises a RunTime error' do
+        expect { subject.raindrop_output('Cyclone')}.to raise_error(RuntimeError)
+      end
+
     end
   end
 end
