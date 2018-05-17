@@ -41,5 +41,10 @@ describe Raindrop do
         expect(subject.raindrop_output(34)).to eq 34
       end
     end
+    context 'when number is not an integer' do
+      it 'raises an error' do
+        expect{subject.raindrop_output('House')}.to raise_error
+      end
+    end
   end
 end
